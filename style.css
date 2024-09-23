@@ -1,0 +1,140 @@
+
+* {
+    margin: 0; /*altera a margem*/
+    padding: 0;
+    box-sizing: border-box; /*serve para contabilizar as margens, bordas e peddings corretamente */
+    /* zerou TODOS os elementos do site para não ter conflito */
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6; /*distanciamento das linhas */
+    background-color: #ffffff;
+}
+
+nav{
+    position: fixed; /*deixa a barra de navegação fixada na tela*/
+    top: 0; /*espaçamento apartir do topo */
+    width: 100%;
+    background-color: #333333;
+    padding: 20px 0; /*altura da distância das letras acima e abaixo da barra */
+
+
+}
+
+nav ul{
+    list-style-type: none; /*tira os pontos da lista */
+    display: flex; /* deixa a lista lado a lado */
+    justify-content: center; /*deixa o texto no centro */
+}
+
+nav ul li {
+    margin: 0 20px; /* distancia de cada texto na barra de navegação */
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none; /* tira a linha de baixo das palavras */
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.3s; /* tempo para a mudança de cor no hover */
+}
+
+nav ul li a:hover { /*muda a cor quando passo o mouse em cima */
+    color: #ff6347;
+    /* font-family: 'Times New Roman', Times, serif; */
+}
+
+section:not(#home)  /*serve para formatar todos as sections EXCETO o home*/
+{
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /*(viewport height) basicamente serve para deixar cada seção com uma tela */
+}
+
+#home {
+    /* background-color: #4a90e2; */
+    background-image: url(https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70070000016597/0a33bcaba879403460afe2ff2aafaaefeede964e0fc11a430f71077867cc87f1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb (0 ,0 ,0);
+    height: 100vh;
+    text-align: center; /*texto que esta dentro do home fica ao centro */
+    display: flex;
+    flex-direction: column; /*deixa o texto em colunas */
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    background-position: 0px 35px;
+}
+
+.content {
+    display: flex; /* nao entendi ao certo oq o display flex faz ainda */
+    flex-direction: row;
+    align-items: center; /* deixa o texto ao centro da imagem */
+    justify-content: center;
+}
+
+.content img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover; /* melhora a proporção da imagem */
+    margin-right: 20px;
+    border-radius: 8px; /* bora arredondada */
+}
+
+.content .text{
+    max-width: 600px; /*n entendi ao certo */
+    text-align: left;
+}
+
+.content .h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.content .text p{
+    font-size: 1.1em;
+    color: #555;
+}
+
+#services {
+    background-color: #ffffff;
+}
+
+#about {
+    background-color: #ffffff;
+}
+
+#contact {
+    background-color: #ffffff;
+}
+
+.cta-button{
+    margin-top: 30px;
+    background-color: #89ff29; /* cor do botao */
+    color: rgb (0, 0, 0);
+    padding: 15px 30px; /* para aumentar o botao */
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer; /* configura como o cursor vai ficar quando colocar o mouse emcima do botao */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 1s ease, transform 1s ease; /* nao entendi */
+}
+
+.Minecraft {
+    background-color: #333;
+    border-radius: 15px;
+    margin: 10%;
+    color: aliceblue;
+    padding: 25px 0px;
+}
+
+footer{
+    text-align: center;
+}
