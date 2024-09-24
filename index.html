@@ -1,149 +1,69 @@
-
-* {
-    margin: 0; /*altera a margem*/
-    padding: 0;
-    box-sizing: border-box; /*serve para contabilizar as margens, bordas e peddings corretamente */
-    /* zerou TODOS os elementos do site para não ter conflito */
-}
-
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6; /*distanciamento das linhas */
-    background-color: #ffffff;
-}
-
-nav{
-    position: fixed; /*deixa a barra de navegação fixada na tela*/
-    top: 0; /*espaçamento apartir do topo */
-    width: 100%;
-    background-color: #333333;
-    padding: 20px 0; /*altura da distância das letras acima e abaixo da barra */
-
-
-}
-
-nav ul{
-    list-style-type: none; /*tira os pontos da lista */
-    display: flex; /* deixa a lista lado a lado */
-    justify-content: center; /*deixa o texto no centro */
-}
-
-nav ul li {
-    margin: 0 20px; /* distancia de cada texto na barra de navegação */
-}
-
-nav ul li a{
-    color: white;
-    text-decoration: none; /* tira a linha de baixo das palavras */
-    font-size: 18px;
-    padding: 10px;
-    transition: color 0.3s; /* tempo para a mudança de cor no hover */
-    transition: font-size 0.5s ease, transform 1s ease;
-}
-
-nav ul li a:hover { /*muda a cor quando passo o mouse em cima */
-    color: #ff6347;
-    font-size: 20px;
-    /* font-family: 'Times New Roman', Times, serif; */
-}
-
-section:not(#home)  /*serve para formatar todos as sections EXCETO o home*/
-{
-    padding: 100px 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;  /*(viewport height) basicamente serve para deixar cada seção com uma tela */
-}
-
-#home {
-    /* background-color: #4a90e2; */
-    background-image: url(https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70070000016597/0a33bcaba879403460afe2ff2aafaaefeede964e0fc11a430f71077867cc87f1);
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: rgb (0 ,0 ,0);
-    height: 100vh;
-    text-align: center; /*texto que esta dentro do home fica ao centro */
-    display: flex;
-    flex-direction: column; /*deixa o texto em colunas */
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    background-position: 0px 35px;
-}
-
-.content {
-    display: flex; /* nao entendi ao certo oq o display flex faz ainda */
-    flex-direction: row;
-    align-items: center; /* deixa o texto ao centro da imagem */
-    justify-content: center;
-}
-
-.content img {
-    width: 400px;
-    height: 300px;
-    object-fit: cover; /* melhora a proporção da imagem */
-    margin-right: 20px;
-    border-radius: 8px; /* bora arredondada */
-}
-
-.content .text{
-    max-width: 600px; /*n entendi ao certo */
-    text-align: left;
-}
-
-.content .h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.content .text p{
-    font-size: 1.1em;
-    color: #555;
-}
-
-#services {
-    background-color: #ffffff;
-}
-
-#about {
-    background-color: #ffffff;
-}
-
-#contact {
-    background-color: #ffffff;
-}
-
-.cta-button{
-    margin-top: 30px;
-    background-color: #89ff29; /* cor do botao */
-    color: rgb (0, 0, 0);
-    padding: 15px 30px; /* para aumentar o botao */
-    font-size: 18px;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer; /* configura como o cursor vai ficar quando colocar o mouse emcima do botao */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 1s ease, transform 1s ease; /* nao entendi */
-    transition: font-size 0.5s ease, transform 1s ease;
-}
-
-.cta-button:hover{
-    font-size: 20px;
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site do Minecraft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     
-    
-}
+    <!-- Barra de navegação -->
+     <nav id="navbar">
+        <ul type="square">
+            <li><a href="#home">O que é o Minecraft</a></li>
+            <li><a href="#services">Como surgiu a idéia?</a></li>
+            <li><a href="#about">Seu desenvolvimento</a></li>
+            <li><a href="#contact">Estado atual</a></li>
+        </ul>
+    </nav>
 
-.Minecraft {
-    background-color: #333;
-    border-radius: 15px;
-    margin: 10%;
-    color: aliceblue;
-    padding: 25px 0px;
-}
+    <!-- Seção Home -->
+     <section id="home">
+        <h1></h1>
+            <div class="Minecraft">
+                <p>Minecraft é um jogo de sandbox lançado em 2011, onde jogadores exploram um mundo 3D de blocos, construindo e lutando. Com modos de sobrevivência e criativo, o jogo oferece grande liberdade e se tornou um fenômeno cultural, atraindo milhões de jogadores.</p>
+            </div>  
+        <button class="cta-button">Saiba Mais</button>
+     </section>
 
-footer{
-    text-align: center;
-}
+<!-- seção de serviços -->
+
+     <section id="services">
+        <div class="content">
+            <img src="https://content.minetest.net/uploads/19f2b13916.png"alt="Imagem da priemria versão do Minecraft do qual se denominava cave game.">
+            <div class="text">
+                <h2>Como surgiu a ideia do Minecraft?</h2>
+                <p>A ideia do Minecraft surgiu em 2009, criada por Markus Persson, também conhecido como "Notch". Ele se inspirou em jogos como "Infiniminer", que apresentava uma mecânica de construção em um ambiente 3D, e outros jogos de sobrevivência. Notch queria criar um jogo que permitisse aos jogadores explorar, construir e interagir livremente em um mundo gerado proceduralmente.</p>
+            </div>
+        </div>
+     </section>
+
+<!-- seção sobre -->
+ <section id="about">
+    <div class="content">
+        <img src="https://preview.redd.it/minecraft-beta-1-7-3-with-alpha-textures-is-such-a-nice-v0-3fji6jhetvfb1.png?auto=webp&s=4c0efc3f8df3c50d4f0bd626b2c9d62aee950637" alt="imagem de uma das primeiras betas do Minecraft.">
+        <div class="text">
+            <h2>Seu desenvolvimento.</h2>
+            <p>Em maio de 2009, Notch lançou a primeira versão do jogo em desenvolvimento. Essa versão tinha gráficos simples e mecânicas básicas, mas já permitia que os jogadores começassem a construir e minerar.</p>
+        </div>
+    </div>
+ </section>
+
+ <!-- Secão de contato -->
+  <section id="contact">
+    <div class="content">
+        <img src="https://i.redd.it/2v5og6ft7uwc1.jpeg" alt="Imagem do ultimo update">
+        <div class="text">
+            <h2>Como está o Minecraft hoje em dia?</h2>
+            <p>Hoje em dia, o Minecraft continua a ser um dos jogos mais populares do mundo, com uma base de jogadores ativa e uma comunidade vibrante. O jogo recebe atualizações regulares, trazendo novos biomas, criaturas e mecânicas, como as recentes "Caves & Cliffs" e "Wild Update". A Mojang escuta o feedback da comunidade para implementar melhorias e novos recursos.</p>
+        </div>
+    </div>
+  </section>
+
+<footer>
+    <p>&copy Francisco Ianiak Raupp</p>
+</footer>
+
+</body>
+</html>
